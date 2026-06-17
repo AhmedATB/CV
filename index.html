@@ -63,16 +63,12 @@
         }
         
         .hover-card-up {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
         .hover-card-up:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Project Image overlay */
-        .project-img-container:hover .project-overlay {
-            opacity: 1;
+            border-color: #bfdbfe; /* blue-200 */
         }
     </style>
 </head>
@@ -129,12 +125,10 @@
                     Ahmed Qays <span class="text-primary">Alkhafaji</span>
                 </h1>
                 
-                <!-- NEW IMPACTFUL SUBTITLE -->
                 <p class="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto md:mx-0 font-medium leading-relaxed">
                     Biomedical Engineering Background | <span class="text-primary font-bold">Led 60+ Team Members</span> | Built Software Used Daily by <span class="font-bold">300+ Community Members</span>
                 </p>
                 
-                <!-- Contact Info -->
                 <div class="flex flex-wrap justify-center md:justify-start gap-3 mt-6 text-sm text-gray-600 print-grid">
                     <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-200 font-medium">
                         <i class="fas fa-location-dot text-primary w-5 text-center mr-2"></i>
@@ -161,14 +155,12 @@
 
             <!-- Profile Image -->
             <div class="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-white shadow-xl overflow-hidden bg-gray-200 flex-shrink-0 no-print">
-                <!-- استبدل الأيقونة بصورتك كما شرحنا سابقاً، مع الحفاظ على التعديل object-[center_35%] -->
-               <img src="1000001256.jpg" alt="Ahmed Alkhafaji" class="w-full h-full object-cover object-[center_35%]">
-                <!-- <img src="profile.jpg" alt="Ahmed Alkhafaji" class="w-full h-full object-cover object-[center_35%]"> -->
+                <img src="1000001256.jpg" alt="Ahmed Alkhafaji" class="w-full h-full object-cover object-[center_35%]">
             </div>
         </div>
     </header>
 
-    <!-- NEW 10-Second Highlights Section -->
+    <!-- Highlights Section -->
     <section class="py-6 bg-white border-t border-b border-gray-100 print-break-inside-avoid">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4 text-center md:text-left">Key Highlights</h3>
@@ -220,7 +212,6 @@
                             <h3 class="font-bold text-gray-900 text-lg">University of Babylon</h3>
                             <p class="text-primary font-medium">B.Sc. in Biomedical Engineering</p>
                             <p class="text-gray-500 text-sm mt-1">Year 4</p>
-                            <!-- Removed the ~70% as requested -->
                         </div>
                         <div class="pt-4 border-t border-gray-100">
                             <h3 class="font-bold text-gray-900 text-lg">High School</h3>
@@ -299,7 +290,7 @@
         </div>
     </section>
 
-    <!-- NEW Projects Highlights Section -->
+    <!-- CLEAN PROJECTS SECTION -->
     <section id="projects" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between mb-10">
@@ -311,120 +302,117 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 print-grid">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 print-grid">
                 
                 <!-- Project 1: Discord Bot -->
-                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden hover-card-up shadow-sm print-break-inside-avoid flex flex-col h-full group">
-                    <!-- Fake Image / Screenshot Area -->
-                    <div class="h-48 bg-gradient-to-br from-indigo-900 to-purple-800 flex items-center justify-center relative project-img-container overflow-hidden no-print">
-                        <i class="fab fa-discord text-6xl text-white/20 absolute -right-4 -bottom-4 transform rotate-12"></i>
-                        <div class="text-center z-10">
-                            <span class="text-white font-mono text-xl font-bold tracking-widest border border-white/30 px-4 py-2 rounded bg-black/20 backdrop-blur-sm">Nero_Bot_v2.0</span>
+                <div class="bg-white rounded-xl border border-gray-200 p-6 hover-card-up shadow-sm flex flex-col h-full print-break-inside-avoid">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl border border-indigo-100 shrink-0">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 leading-tight">Infrastructure Automation Bot</h3>
                         </div>
-                        <!-- Hover Overlay -->
-                        <div class="absolute inset-0 bg-primary/90 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 project-overlay backdrop-blur-sm">
-                            <button class="bg-white text-primary px-6 py-2 rounded-full font-bold shadow-lg hover:scale-105 transition-transform">
-                                <i class="fab fa-github mr-2"></i> View Code
-                            </button>
-                        </div>
+                        <span class="text-xs font-bold px-2 py-1 bg-gray-100 text-gray-600 rounded whitespace-nowrap ml-2">Core Infra</span>
                     </div>
                     
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold text-gray-900">Infrastructure Automation Bot</h3>
-                            <span class="text-xs font-bold px-2 py-1 bg-purple-100 text-purple-700 rounded-md">Core Infra</span>
-                        </div>
-                        <p class="text-gray-600 text-sm flex-grow mb-4 leading-relaxed">
-                            Engineered a multi-functional Python bot utilized daily as the core infrastructure for team operations. Developed modules for automated financial tracking, task evaluation, and a robust warning/moderation system.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-100">
-                            <span class="text-xs font-bold px-2 py-1 bg-gray-100 text-gray-700 rounded">Python</span>
-                            <span class="text-xs font-bold px-2 py-1 bg-gray-100 text-gray-700 rounded">Discord API</span>
-                            <span class="text-xs font-bold px-2 py-1 bg-gray-100 text-gray-700 rounded">Financial Logic</span>
-                        </div>
+                    <p class="text-gray-600 text-sm flex-grow mb-5 leading-relaxed">
+                        Engineered a multi-functional Python bot utilized daily as the core infrastructure for team operations. Developed modules for automated financial tracking, task evaluation, and a robust warning/moderation system.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-white border border-gray-200 text-gray-700 rounded-md">Python</span>
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-white border border-gray-200 text-gray-700 rounded-md">Discord API</span>
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-white border border-gray-200 text-gray-700 rounded-md">Financial Logic</span>
+                    </div>
+
+                    <div class="mt-auto pt-4 border-t border-gray-100">
+                        <a href="#" class="inline-flex items-center text-sm font-semibold text-primary hover:text-secondary transition-colors group">
+                            <i class="fab fa-github mr-2 group-hover:scale-110 transition-transform"></i> View Source Code
+                        </a>
                     </div>
                 </div>
 
                 <!-- Project 2: BioMed Simulation -->
-                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden hover-card-up shadow-sm print-break-inside-avoid flex flex-col h-full group">
-                    <div class="h-48 bg-gradient-to-br from-teal-500 to-blue-600 flex items-center justify-center relative project-img-container overflow-hidden no-print">
-                        <i class="fas fa-laptop-medical text-6xl text-white/20 absolute -left-4 -bottom-4 transform -rotate-12"></i>
-                        <div class="text-center z-10 w-3/4">
-                            <div class="h-2 bg-white/30 rounded w-full mb-2"></div>
-                            <div class="h-2 bg-white/30 rounded w-5/6 mx-auto mb-2"></div>
-                            <div class="h-2 bg-white/30 rounded w-4/6 mx-auto"></div>
+                <div class="bg-white rounded-xl border border-gray-200 p-6 hover-card-up shadow-sm flex flex-col h-full print-break-inside-avoid">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-teal-50 text-teal-600 flex items-center justify-center text-xl border border-teal-100 shrink-0">
+                                <i class="fas fa-laptop-medical"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 leading-tight">Biomedical Simulation Platform</h3>
                         </div>
-                        <div class="absolute inset-0 bg-primary/90 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 project-overlay backdrop-blur-sm">
-                            <button class="bg-white text-primary px-6 py-2 rounded-full font-bold shadow-lg hover:scale-105 transition-transform">
-                                <i class="fas fa-external-link-alt mr-2"></i> Live Demo
-                            </button>
-                        </div>
+                        <span class="text-xs font-bold px-2 py-1 bg-gray-100 text-gray-600 rounded whitespace-nowrap ml-2">Web App</span>
                     </div>
                     
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold text-gray-900">Biomedical Simulation Platform</h3>
-                            <span class="text-xs font-bold px-2 py-1 bg-blue-100 text-blue-700 rounded-md">Web App</span>
-                        </div>
-                        <p class="text-gray-600 text-sm flex-grow mb-4 leading-relaxed">
-                            Designed and coded a 12-page interactive web application for academic demonstrations. Delivered MVP in 48 hours, featuring analytical, physical, and engineering-based simulations.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-100">
-                            <span class="text-xs font-bold px-2 py-1 bg-gray-100 text-gray-700 rounded">JavaScript</span>
-                            <span class="text-xs font-bold px-2 py-1 bg-gray-100 text-gray-700 rounded">HTML/CSS</span>
-                            <span class="text-xs font-bold px-2 py-1 bg-gray-100 text-gray-700 rounded">Physics Engines</span>
-                        </div>
+                    <p class="text-gray-600 text-sm flex-grow mb-5 leading-relaxed">
+                        Designed and coded a 12-page interactive web application for academic demonstrations. Delivered MVP in 48 hours, featuring analytical, physical, and engineering-based simulations.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-white border border-gray-200 text-gray-700 rounded-md">JavaScript</span>
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-white border border-gray-200 text-gray-700 rounded-md">HTML/CSS</span>
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-white border border-gray-200 text-gray-700 rounded-md">Physics Engines</span>
+                    </div>
+
+                    <div class="mt-auto pt-4 border-t border-gray-100">
+                        <a href="#" class="inline-flex items-center text-sm font-semibold text-primary hover:text-secondary transition-colors group">
+                            <i class="fas fa-external-link-alt mr-2 group-hover:scale-110 transition-transform"></i> Live Demo
+                        </a>
                     </div>
                 </div>
 
                 <!-- Project 3: Python Game -->
-                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden hover-card-up shadow-sm print-break-inside-avoid flex flex-col h-full group">
-                    <div class="h-48 bg-gray-800 flex items-center justify-center relative project-img-container overflow-hidden no-print border-b border-gray-200">
-                        <i class="fas fa-terminal text-green-400/20 text-6xl absolute right-10 bottom-4"></i>
-                        <div class="text-left z-10 w-full px-6">
-                            <p class="text-green-400 font-mono text-sm">> import random</p>
-                            <p class="text-green-400 font-mono text-sm">> init_roulette()</p>
-                            <p class="text-green-400 font-mono text-sm">> waiting for players...</p>
-                        </div>
-                        <div class="absolute inset-0 bg-primary/90 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 project-overlay backdrop-blur-sm">
-                            <button class="bg-white text-primary px-6 py-2 rounded-full font-bold shadow-lg hover:scale-105 transition-transform">
-                                <i class="fab fa-github mr-2"></i> View Code
-                            </button>
+                <div class="bg-white rounded-xl border border-gray-200 p-6 hover-card-up shadow-sm flex flex-col h-full print-break-inside-avoid">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl border border-emerald-100 shrink-0">
+                                <i class="fas fa-terminal"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 leading-tight">Interactive Logic Game</h3>
                         </div>
                     </div>
                     
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Interactive Logic Game</h3>
-                        <p class="text-gray-600 text-sm flex-grow mb-4 leading-relaxed">
-                            Programmed a roulette-style interactive game focusing on backend logic and randomization mechanics. Integrated a robust user participation system ensuring fair play algorithms.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-100">
-                            <span class="text-xs font-bold px-2 py-1 bg-gray-100 text-gray-700 rounded">Python</span>
-                            <span class="text-xs font-bold px-2 py-1 bg-gray-100 text-gray-700 rounded">Algorithms</span>
-                        </div>
+                    <p class="text-gray-600 text-sm flex-grow mb-5 leading-relaxed">
+                        Programmed a roulette-style interactive game focusing on backend logic and randomization mechanics. Integrated a robust user participation system ensuring fair play algorithms.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-white border border-gray-200 text-gray-700 rounded-md">Python</span>
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-white border border-gray-200 text-gray-700 rounded-md">Algorithms</span>
+                    </div>
+
+                    <div class="mt-auto pt-4 border-t border-gray-100">
+                        <a href="#" class="inline-flex items-center text-sm font-semibold text-primary hover:text-secondary transition-colors group">
+                            <i class="fab fa-github mr-2 group-hover:scale-110 transition-transform"></i> View Source Code
+                        </a>
                     </div>
                 </div>
 
                 <!-- Project 4: Seminar Sites -->
-                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden hover-card-up shadow-sm print-break-inside-avoid flex flex-col h-full group">
-                    <div class="h-48 bg-gradient-to-tr from-gray-100 to-gray-200 flex items-center justify-center relative project-img-container overflow-hidden no-print">
-                        <i class="fas fa-browser text-gray-300 text-6xl"></i>
-                        <div class="absolute inset-0 bg-primary/90 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 project-overlay backdrop-blur-sm">
-                            <button class="bg-white text-primary px-6 py-2 rounded-full font-bold shadow-lg hover:scale-105 transition-transform">
-                                <i class="fas fa-link mr-2"></i> Visit Site
-                            </button>
+                <div class="bg-white rounded-xl border border-gray-200 p-6 hover-card-up shadow-sm flex flex-col h-full print-break-inside-avoid">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-orange-50 text-orange-600 flex items-center justify-center text-xl border border-orange-100 shrink-0">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 leading-tight">Academic Project Websites</h3>
                         </div>
                     </div>
                     
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Academic Project Websites</h3>
-                        <p class="text-gray-600 text-sm flex-grow mb-4 leading-relaxed">
-                            Developed and deployed fully functional websites dedicated to organizing academic materials and presenting simulation results, enhancing the digital presence of university seminars.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-100">
-                            <span class="text-xs font-bold px-2 py-1 bg-gray-100 text-gray-700 rounded">Web Development</span>
-                            <span class="text-xs font-bold px-2 py-1 bg-gray-100 text-gray-700 rounded">UI/UX</span>
-                        </div>
+                    <p class="text-gray-600 text-sm flex-grow mb-5 leading-relaxed">
+                        Developed and deployed fully functional websites dedicated to organizing academic materials and presenting simulation results, enhancing the digital presence of university seminars.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-white border border-gray-200 text-gray-700 rounded-md">Web Development</span>
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-white border border-gray-200 text-gray-700 rounded-md">UI/UX</span>
+                    </div>
+
+                    <div class="mt-auto pt-4 border-t border-gray-100">
+                        <a href="#" class="inline-flex items-center text-sm font-semibold text-primary hover:text-secondary transition-colors group">
+                            <i class="fas fa-link mr-2 group-hover:scale-110 transition-transform"></i> Visit Site
+                        </a>
                     </div>
                 </div>
 
@@ -520,11 +508,3 @@
     </script>
 </body>
 </html>
-```eof
-
-### ما الذي يجب عليك فعله الآن؟
-1. انسخ هذا الكود بالكامل واستبدله في ملف `index.html`.
-2. ستلاحظ أنني أضفت مساحات (صناديق ملونة) في قسم المشاريع تمثل صور/لقطات الشاشة بأسلوب عصري جداً يظهر فيه زر عند التمرير بالماوس (Hover). 
-3. لا تنسَ أن سطر صورتك الشخصية موجود في السطر رقم 144، فإذا أردت وضع الصورة الحقيقية، فقط احذف علامات التعليق `<!--` و `-->` من السطر 145 وامسح أيقونة الـ `<i>` التي فوقها.
-
-ارفع التحديث الجديد إلى GitHub بنفس الطريقة وشاهد كيف تغير شكل الموقع ليصبح احترافياً جداً ومليئاً بالأرقام المقنعة! كيف يبدو لك التصميم الجديد لقسم المشاريع؟
