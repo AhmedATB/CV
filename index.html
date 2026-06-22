@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Qays Alkhafaji | Biomedical Engineer & Technical Project Leader</title>
+    <title>أحمد قيس الخفاجي | مهندس طبي وقائد تقني للمشاريع</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts (Cairo for Arabic) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,7 +22,7 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Cairo', 'sans-serif'],
                     },
                     colors: {
                         primary: '#2563eb', // Blue-600
@@ -36,7 +36,7 @@
 
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Cairo', sans-serif;
             background-color: #f8fafc;
         }
         
@@ -83,21 +83,21 @@
         /* ========================================= */
         @media print {
             @page { margin: 8mm; size: A4; }
-            body { font-size: 8.5pt !important; line-height: 1.3 !important; background: white !important; color: #111 !important; }
+            body { font-size: 8.5pt !important; line-height: 1.4 !important; background: white !important; color: #111 !important; }
             
             /* Hide Web-Only Elements to save massive space */
             .no-print, nav, footer, #hero-canvas, #mobile-menu, button, #metrics-section { display: none !important; }
             
             /* The Magic 2-Column Grid just for Print */
-            .cv-main-wrapper { display: grid !important; grid-template-columns: 58% 38%; justify-content: space-between; width: 100% !important; }
+            .cv-main-wrapper { display: grid !important; grid-template-columns: 58% 38%; justify-content: space-between; width: 100% !important; direction: rtl; }
             .cv-main-wrapper .max-w-7xl { padding: 0 !important; max-width: 100% !important; }
             
-            /* Grid Assignments */
+            /* Grid Assignments (In RTL, Column 1 is the Right Side, Column 2 is Left Side) */
             #about { grid-column: 1 / 3; } /* Summary & Edu span full top width */
-            #experience { grid-column: 1 / 2; grid-row: 2; } /* Left Column */
-            #projects { grid-column: 1 / 2; grid-row: 3; }   /* Left Column */
-            #skills { grid-column: 2 / 3; grid-row: 2; }     /* Right Column */
-            #achievements { grid-column: 2 / 3; grid-row: 3; }/* Right Column */
+            #experience { grid-column: 1 / 2; grid-row: 2; } /* Right Column */
+            #projects { grid-column: 1 / 2; grid-row: 3; }   /* Right Column */
+            #skills { grid-column: 2 / 3; grid-row: 2; }     /* Left Column */
+            #achievements { grid-column: 2 / 3; grid-row: 3; }/* Left Column */
             
             section { padding: 0 !important; margin-bottom: 12px !important; break-inside: avoid; border: none !important; background: transparent !important; }
             
@@ -115,7 +115,7 @@
             h2 i { display: none !important; } /* Hide heading icons */
             h3 { font-size: 10.5pt !important; margin-bottom: 2px !important; color: #111 !important; }
             h4 { font-size: 9.5pt !important; margin-bottom: 2px !important; }
-            p, li { font-size: 8.5pt !important; color: #333 !important; line-height: 1.3 !important; }
+            p, li { font-size: 8.5pt !important; color: #333 !important; line-height: 1.4 !important; }
             .text-lg, .text-xl { font-size: 9.5pt !important; }
             .text-sm { font-size: 8pt !important; }
             .text-xs { font-size: 7.5pt !important; }
@@ -128,9 +128,9 @@
             header .px-4 { padding-left: 6px !important; padding-right: 6px !important; box-shadow: none !important; border-color: #ddd !important; }
             
             /* Experience Compact List */
-            .border-l-2 { border: none !important; margin-left: 0 !important; }
+            .border-r-2 { border: none !important; margin-right: 0 !important; }
             .timeline-dot { display: none !important; }
-            .pl-8 { padding-left: 0 !important; }
+            .pr-8 { padding-right: 0 !important; }
             .space-y-10 > div { margin-bottom: 8px !important; margin-top: 0 !important; }
             .bg-blue-50 { background: transparent !important; }
             
@@ -151,10 +151,10 @@
             
             #achievements .print-grid { display: flex !important; flex-direction: column !important; gap: 6px !important; }
             #achievements .w-12 { display: none !important; }
-            #achievements .absolute { top: 2px !important; right: 4px !important; background: transparent !important; color: #666 !important;}
+            #achievements .absolute { top: 2px !important; left: 4px !important; background: transparent !important; color: #666 !important;}
             
             /* Lists & Tags */
-            ul.list-disc { padding-left: 14px !important; }
+            ul.list-disc { padding-right: 14px !important; padding-left: 0 !important; }
             ul.list-disc li { margin-bottom: 2px !important; }
             .flex-wrap.gap-2 { gap: 4px !important; }
             .px-3.py-1\.5, .px-2\.5.py-1 { padding: 2px 6px !important; border-radius: 4px !important; border-color: #ddd !important; background: transparent !important; }
@@ -174,11 +174,11 @@
                 </div>
                 
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Home</a>
-                    <a href="#about" class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">About</a>
-                    <a href="#experience" class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Experience</a>
-                    <a href="#projects" class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Projects</a>
-                    <a href="#skills" class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Skills</a>
+                    <a href="#home" class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">الرئيسية</a>
+                    <a href="#about" class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">حول</a>
+                    <a href="#experience" class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">الخبرات</a>
+                    <a href="#projects" class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">المشاريع</a>
+                    <a href="#skills" class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">المهارات</a>
                 </div>
 
                 <div class="md:hidden flex items-center">
@@ -191,16 +191,16 @@
         
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Home</a>
-                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">About</a>
-                <a href="#experience" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Experience</a>
-                <a href="#projects" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Projects</a>
-                <a href="#skills" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Skills</a>
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">الرئيسية</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">حول</a>
+                <a href="#experience" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">الخبرات</a>
+                <a href="#projects" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">المشاريع</a>
+                <a href="#skills" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">المهارات</a>
             </div>
         </div>
     </nav>
 
-    <button onclick="window.print()" class="fixed bottom-6 right-6 z-50 bg-primary text-white p-4 rounded-full shadow-lg hover:bg-secondary transition-colors no-print" title="Print / Save as PDF">
+    <button onclick="window.print()" class="fixed bottom-6 left-6 z-50 bg-primary text-white p-4 rounded-full shadow-lg hover:bg-secondary transition-colors no-print" title="طباعة / حفظ كملف PDF">
         <i class="fas fa-file-pdf text-xl"></i>
     </button>
 
@@ -211,50 +211,50 @@
         
         <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-10 relative z-10 hero-content">
             
-            <div class="flex-1 text-center md:text-left space-y-5">
+            <div class="flex-1 text-center md:text-right space-y-5">
                 <div class="flex flex-wrap justify-center md:justify-start gap-2 mb-2">
                     <span class="px-4 py-1.5 bg-blue-50 text-primary text-sm font-bold rounded-full border border-blue-100">
-                        Biomedical Engineering Student
+                        طالب هندسة طبية
                     </span>
                     <span class="px-4 py-1.5 bg-gray-100 text-gray-700 text-sm font-bold rounded-full border border-gray-200">
-                        Technical Leader
+                        قائد تقني
                     </span>
                     <span class="px-4 py-1.5 bg-gray-100 text-gray-700 text-sm font-bold rounded-full border border-gray-200">
-                        Software Developer
+                        مطور برمجيات
                     </span>
                 </div>
                 
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
-                    Ahmed Qays <span class="text-primary">Alkhafaji</span>
+                    أحمد قيس <span class="text-primary">الخفاجي</span>
                 </h1>
                 
                 <p class="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto md:mx-0 font-medium leading-relaxed">
-                    <span class="text-primary font-bold">Led 60+ Team Members</span> | Developed Software Supporting a <span class="font-bold">300+ Member Community</span>
+                    <span class="text-primary font-bold">قاد فريقًا يضم +60 عضوًا</span> | طوّر برمجيات تدعم <span class="font-bold">مجتمعًا يضم +300 عضو</span>
                 </p>
 
                 <p class="text-base text-gray-500 max-w-2xl mx-auto md:mx-0">
-                    Biomedical Engineering Student with experience in software development, team leadership, and project management.
+                    طالب هندسة طبية يتمتع بخبرة في تطوير البرمجيات، قيادة الفرق، وإدارة المشاريع.
                 </p>
                 
                 <div class="flex flex-wrap justify-center md:justify-start gap-3 mt-6 text-sm text-gray-600 print-grid">
                     <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-200 font-medium">
-                        <i class="fas fa-location-dot text-primary w-5 text-center mr-2"></i>
-                        <span>Babil, Iraq</span>
+                        <i class="fas fa-location-dot text-primary w-5 text-center ml-2"></i>
+                        <span>بابل، العراق</span>
                     </div>
                     <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-200 font-medium">
-                        <i class="fas fa-phone text-primary w-5 text-center mr-2"></i>
-                        <a href="tel:07802333247" class="hover:text-primary">07802333247</a>
+                        <i class="fas fa-phone text-primary w-5 text-center ml-2"></i>
+                        <a href="tel:07802333247" class="hover:text-primary" dir="ltr">07802333247</a>
                     </div>
                     <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-200 font-medium">
-                        <i class="fas fa-envelope text-primary w-5 text-center mr-2"></i>
+                        <i class="fas fa-envelope text-primary w-5 text-center ml-2"></i>
                         <a href="mailto:qaysahmed5@gmail.com" class="hover:text-primary">qaysahmed5@gmail.com</a>
                     </div>
                     <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-200 font-medium no-print hover:border-primary transition-colors cursor-pointer">
-                        <i class="fab fa-linkedin text-primary w-5 text-center mr-2"></i>
+                        <i class="fab fa-linkedin text-primary w-5 text-center ml-2"></i>
                         <a href="#">LinkedIn</a>
                     </div>
                     <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-200 font-medium no-print hover:border-primary transition-colors cursor-pointer">
-                        <i class="fab fa-github text-primary w-5 text-center mr-2"></i>
+                        <i class="fab fa-github text-primary w-5 text-center ml-2"></i>
                         <a href="#">GitHub</a>
                     </div>
                 </div>
@@ -270,37 +270,37 @@
     <!-- HUGE IMPACT METRICS SECTION (Hidden on Print to save space) -->
     <section id="metrics-section" class="py-10 bg-white border-t border-b border-gray-100 print-break-inside-avoid">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-8 text-center">Impact Metrics</h3>
+            <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-8 text-center">مقاييس الأثر</h3>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center print-grid-3">
                 
                 <div class="p-4 rounded-xl hover:bg-blue-50 transition-colors">
-                    <div class="text-4xl md:text-5xl font-black text-primary mb-2"><span class="counter-value" data-target="60">0</span>+</div>
-                    <div class="text-xs md:text-sm font-bold text-gray-600 uppercase tracking-wide">Active Team<br>Members Led</div>
+                    <div class="text-4xl md:text-5xl font-black text-primary mb-2 flex justify-center" dir="ltr"><span class="counter-value" data-target="60">0</span>+</div>
+                    <div class="text-xs md:text-sm font-bold text-gray-600 tracking-wide">عضوًا نشطًا<br>في الفريق</div>
                 </div>
                 
                 <div class="p-4 rounded-xl hover:bg-blue-50 transition-colors">
-                    <div class="text-4xl md:text-5xl font-black text-primary mb-2"><span class="counter-value" data-target="340">0</span></div>
-                    <div class="text-xs md:text-sm font-bold text-gray-600 uppercase tracking-wide">Community<br>Members Reached</div>
+                    <div class="text-4xl md:text-5xl font-black text-primary mb-2 flex justify-center" dir="ltr"><span class="counter-value" data-target="340">0</span>+</div>
+                    <div class="text-xs md:text-sm font-bold text-gray-600 tracking-wide">عضوًا في المجتمع<br>تمت خدمتهم</div>
                 </div>
 
                 <div class="p-4 rounded-xl hover:bg-blue-50 transition-colors">
-                    <div class="text-4xl md:text-5xl font-black text-primary mb-2"><span class="counter-value" data-target="3">0</span></div>
-                    <div class="text-xs md:text-sm font-bold text-gray-600 uppercase tracking-wide">Years Student<br>Representative</div>
+                    <div class="text-4xl md:text-5xl font-black text-primary mb-2 flex justify-center" dir="ltr"><span class="counter-value" data-target="3">0</span></div>
+                    <div class="text-xs md:text-sm font-bold text-gray-600 tracking-wide">سنوات متتالية<br>كممثل للطلبة</div>
                 </div>
 
                 <div class="p-4 rounded-xl hover:bg-blue-50 transition-colors">
-                    <div class="text-4xl md:text-5xl font-black text-primary mb-2"><span class="counter-value" data-target="100">0</span>+</div>
-                    <div class="text-xs md:text-sm font-bold text-gray-600 uppercase tracking-wide">Conference<br>Participants Supported</div>
+                    <div class="text-4xl md:text-5xl font-black text-primary mb-2 flex justify-center" dir="ltr"><span class="counter-value" data-target="100">0</span>+</div>
+                    <div class="text-xs md:text-sm font-bold text-gray-600 tracking-wide">مشاركًا في المؤتمرات<br>تم دعمهم</div>
                 </div>
 
                 <div class="p-4 rounded-xl hover:bg-blue-50 transition-colors">
-                    <div class="text-4xl md:text-5xl font-black text-primary mb-2"><span class="counter-value" data-target="12">0</span></div>
-                    <div class="text-xs md:text-sm font-bold text-gray-600 uppercase tracking-wide">Simulation<br>Pages Developed</div>
+                    <div class="text-4xl md:text-5xl font-black text-primary mb-2 flex justify-center" dir="ltr"><span class="counter-value" data-target="12">0</span></div>
+                    <div class="text-xs md:text-sm font-bold text-gray-600 tracking-wide">صفحة محاكاة<br>تم تطويرها</div>
                 </div>
 
                 <div class="p-4 rounded-xl hover:bg-blue-50 transition-colors">
-                    <div class="text-4xl md:text-5xl font-black text-primary mb-2"><span class="counter-value" data-target="300">0</span>+</div>
-                    <div class="text-xs md:text-sm font-bold text-gray-600 uppercase tracking-wide">Users Benefiting<br>From Internal Systems</div>
+                    <div class="text-4xl md:text-5xl font-black text-primary mb-2 flex justify-center" dir="ltr"><span class="counter-value" data-target="300">0</span>+</div>
+                    <div class="text-xs md:text-sm font-bold text-gray-600 tracking-wide">مستخدمًا يستفيدون من<br>الأنظمة الداخلية</div>
                 </div>
 
             </div>
@@ -317,38 +317,38 @@
                     
                     <div class="md:col-span-2 print-break-inside-avoid">
                         <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center border-b border-gray-100 pb-3">
-                            <i class="fas fa-user text-primary mr-3 text-xl"></i> Professional Summary
+                            <i class="fas fa-user text-primary ml-3 text-xl"></i> ملخص مهني
                         </h2>
                         <p class="text-gray-600 leading-relaxed text-lg">
-                            A dynamic Technical Leader and Project Manager with a solid foundation in Biomedical Engineering. Proven track record of scaling communities, leading large teams, and organizing university-level academic events. Adept at bridging the gap between engineering concepts and practical software solutions, successfully deploying web platforms and automation bots to streamline team operations and daily workflows.
+                            قائد تقني ومدير مشاريع ديناميكي بخلفية قوية في الهندسة الطبية. يمتلك سجلًا حافلًا في توسيع المجتمعات، قيادة الفرق الكبيرة، وتنظيم الفعاليات الأكاديمية على مستوى الجامعة. بارع في سد الفجوة بين المفاهيم الهندسية والحلول البرمجية العملية، مع نجاح مثبت في نشر منصات الويب وبوتات الأتمتة لتبسيط عمليات الفريق وسير العمل اليومي.
                         </p>
 
                         <!-- Areas of Interest -->
                         <div class="mt-8 pt-6 border-t border-gray-100">
-                            <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Areas of Interest</h3>
+                            <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">مجالات الاهتمام</h3>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-blue-50 hover:text-primary hover:border-blue-200 transition-colors">Technical Project Management</span>
-                                <span class="px-3 py-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-blue-50 hover:text-primary hover:border-blue-200 transition-colors">Software Development</span>
-                                <span class="px-3 py-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-blue-50 hover:text-primary hover:border-blue-200 transition-colors">Biomedical Engineering</span>
-                                <span class="px-3 py-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-blue-50 hover:text-primary hover:border-blue-200 transition-colors">Medical Technologies</span>
-                                <span class="px-3 py-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-blue-50 hover:text-primary hover:border-blue-200 transition-colors">Artificial Intelligence Applications</span>
+                                <span class="px-3 py-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-blue-50 hover:text-primary hover:border-blue-200 transition-colors">إدارة المشاريع التقنية</span>
+                                <span class="px-3 py-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-blue-50 hover:text-primary hover:border-blue-200 transition-colors">تطوير البرمجيات</span>
+                                <span class="px-3 py-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-blue-50 hover:text-primary hover:border-blue-200 transition-colors">الهندسة الطبية الحيوية</span>
+                                <span class="px-3 py-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-blue-50 hover:text-primary hover:border-blue-200 transition-colors">التقنيات الطبية</span>
+                                <span class="px-3 py-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-blue-50 hover:text-primary hover:border-blue-200 transition-colors">تطبيقات الذكاء الاصطناعي</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="md:col-span-1 print-break-inside-avoid bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-center">
                         <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center border-b border-gray-100 pb-3">
-                            <i class="fas fa-graduation-cap text-primary mr-3 text-xl"></i> Education
+                            <i class="fas fa-graduation-cap text-primary ml-3 text-xl"></i> التعليم
                         </h2>
                         <div class="space-y-4">
                             <div>
-                                <h3 class="font-bold text-gray-900 text-lg">University of Babylon</h3>
-                                <p class="text-primary font-medium">Bachelor of Science in Biomedical Engineering</p>
-                                <p class="text-gray-500 text-sm mt-1 font-medium"><i class="fas fa-clock mr-1"></i> Expected Graduation: 2027</p>
+                                <h3 class="font-bold text-gray-900 text-lg">جامعة بابل</h3>
+                                <p class="text-primary font-medium">بكالوريوس في الهندسة الطبية الحياتية</p>
+                                <p class="text-gray-500 text-sm mt-1 font-medium"><i class="fas fa-clock ml-1"></i> التخرج المتوقع: 2027</p>
                             </div>
                             <div class="pt-4 border-t border-gray-100">
-                                <h3 class="font-bold text-gray-900 text-lg">High School</h3>
-                                <p class="text-gray-600 font-medium">GPA: 92.71%</p>
+                                <h3 class="font-bold text-gray-900 text-lg">المدرسة الإعدادية</h3>
+                                <p class="text-gray-600 font-medium">المعدل التراكمي: <span dir="ltr">92.71%</span></p>
                             </div>
                         </div>
                     </div>
@@ -360,61 +360,61 @@
         <!-- Leadership & Experience -->
         <section id="experience" class="py-16 bg-gray-50 border-y border-gray-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center md:text-left">
-                    <i class="fas fa-briefcase text-primary mr-3 text-xl print:hidden"></i>Leadership & <span class="text-primary">Impact</span>
+                <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center md:text-right">
+                    <i class="fas fa-briefcase text-primary ml-3 text-xl print:hidden"></i>القيادة و <span class="text-primary">الأثر</span>
                 </h2>
                 
-                <div class="relative border-l-2 border-blue-200 ml-3 md:ml-4 space-y-10">
+                <div class="relative border-r-2 border-blue-200 mr-3 md:mr-4 space-y-10">
                     
-                    <div class="relative pl-8 print-break-inside-avoid">
-                        <div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1 timeline-dot border-2 border-white"></div>
+                    <div class="relative pr-8 print-break-inside-avoid">
+                        <div class="absolute w-4 h-4 bg-primary rounded-full -right-[9px] top-1 timeline-dot border-2 border-white"></div>
                         <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover-card-up">
                             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-900">Founder & Team Leader</h3>
-                                    <p class="text-primary font-bold">"Lunex" Team</p>
+                                    <h3 class="text-xl font-bold text-gray-900">مؤسس وقائد الفريق</h3>
+                                    <p class="text-primary font-bold">فريق "Lunex"</p>
                                 </div>
                             </div>
                             <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                                <li>Founded and actively manage a cross-functional team of <span class="font-bold text-gray-900">60+ members</span>.</li>
-                                <li>Direct strategic operations, financial management, and core decision-making processes.</li>
-                                <li><span class="font-bold text-gray-900">Organized monthly events with financial rewards</span> and participation incentives to drive community growth.</li>
-                                <li>Achieved high team retention by building a strong cultural identity and continuous engagement.</li>
+                                <li>أسس ويدير بنشاط فريقًا متعدد التخصصات يضم <span class="font-bold text-gray-900">+60 عضوًا</span>.</li>
+                                <li>يوجه العمليات الاستراتيجية، الإدارة المالية، وعمليات صنع القرار الأساسية.</li>
+                                <li><span class="font-bold text-gray-900">نظّم فعاليات شهرية بجوائز مالية</span> وحوافز مشاركة لدفع وتيرة نمو المجتمع.</li>
+                                <li>حقق نسبة احتفاظ عالية بالفريق من خلال بناء هوية ثقافية قوية وتفاعل مستمر.</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="relative pl-8 print-break-inside-avoid">
-                        <div class="absolute w-4 h-4 bg-blue-400 rounded-full -left-[9px] top-1 timeline-dot border-2 border-white"></div>
+                    <div class="relative pr-8 print-break-inside-avoid">
+                        <div class="absolute w-4 h-4 bg-blue-400 rounded-full -right-[9px] top-1 timeline-dot border-2 border-white"></div>
                         <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover-card-up">
                             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-900">Administrative Leader</h3>
-                                    <p class="text-primary font-bold">"Nero" Team</p>
+                                    <h3 class="text-xl font-bold text-gray-900">قائد إداري</h3>
+                                    <p class="text-primary font-bold">فريق "Nero"</p>
                                 </div>
                             </div>
                             <ul class="list-disc list-inside text-gray-600 space-y-2">
-                                <li>Promoted rapidly to executive administrative role within the core management team.</li>
-                                <li><span class="font-bold text-gray-900 text-lg">Grew community from 30 to 340 members</span> during administrative tenure through targeted initiatives.</li>
-                                <li>Consistently recognized for leadership trust, culminating in being selected to co-found a new organizational branch.</li>
+                                <li>ترقى سريعًا إلى دور إداري تنفيذي ضمن فريق الإدارة الأساسي.</li>
+                                <li><span class="font-bold text-gray-900 text-lg">نمّى المجتمع من 30 إلى 340 عضوًا</span> خلال فترة إدارته من خلال مبادرات موجهة ومدروسة.</li>
+                                <li>حظي دائمًا بتقدير عالٍ للثقة القيادية، مما توج باختياره للمشاركة في تأسيس فرع تنظيمي جديد.</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="relative pl-8 print-break-inside-avoid">
-                        <div class="absolute w-4 h-4 bg-blue-400 rounded-full -left-[9px] top-1 timeline-dot border-2 border-white"></div>
+                    <div class="relative pr-8 print-break-inside-avoid">
+                        <div class="absolute w-4 h-4 bg-blue-400 rounded-full -right-[9px] top-1 timeline-dot border-2 border-white"></div>
                         <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover-card-up">
                             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-900">Student Representative & Conference Organizer</h3>
-                                    <p class="text-primary font-bold">University of Babylon</p>
+                                    <h3 class="text-xl font-bold text-gray-900">ممثل الطلبة ومنظم المؤتمرات</h3>
+                                    <p class="text-primary font-bold">جامعة بابل</p>
                                 </div>
-                                <span class="inline-block mt-2 sm:mt-0 bg-gray-100 text-gray-700 text-sm font-bold px-3 py-1 rounded-full">3 Consecutive Years</span>
+                                <span class="inline-block mt-2 sm:mt-0 bg-gray-100 text-gray-700 text-sm font-bold px-3 py-1 rounded-full">3 سنوات متتالية</span>
                             </div>
                             <ul class="list-disc list-inside text-gray-600 space-y-2">
-                                <li>Served as the official Student Representative for 3 consecutive years, bridging communication between cohort and faculty administration.</li>
-                                <li>Managed logistics and real-time problem-solving for University-Level Conferences.</li>
-                                <li>Successfully coordinated and supported <span class="font-bold text-gray-900">100+ conference participants</span>.</li>
+                                <li>عمل كممثل رسمي للطلبة لمدة 3 سنوات متتالية، كحلقة وصل قوية بين الدفعة الأكاديمية وإدارة الكلية.</li>
+                                <li>أدار العمليات اللوجستية وحل المشكلات الفورية في المؤتمرات على مستوى الجامعة.</li>
+                                <li>نسّق بنجاح وقدّم الدعم المباشر لأكثر من <span class="font-bold text-gray-900">100 مشاركًا في المؤتمرات</span>.</li>
                             </ul>
                         </div>
                     </div>
@@ -428,10 +428,10 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row items-center justify-between mb-10">
                     <h2 class="text-3xl font-bold text-gray-900">
-                        <i class="fas fa-folder-open text-primary mr-3 text-xl print:hidden"></i>Project <span class="text-primary">Highlights</span>
+                        <i class="fas fa-folder-open text-primary ml-3 text-xl print:hidden"></i>أبرز <span class="text-primary">المشاريع</span>
                     </h2>
                     <p class="text-gray-500 text-sm mt-2 md:mt-0 bg-gray-100 px-4 py-2 rounded-lg font-medium">
-                        <i class="fas fa-code mr-2"></i> Software & Automation Portfolio
+                        <i class="fas fa-code ml-2"></i> معرض البرمجيات والأتمتة
                     </p>
                 </div>
 
@@ -443,17 +443,17 @@
                             <div class="w-10 h-10 rounded-lg bg-teal-50 text-teal-600 flex items-center justify-center text-xl border border-teal-100 shrink-0">
                                 <i class="fas fa-laptop-medical"></i>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-900 leading-tight">Educational Simulation Platform</h3>
+                            <h3 class="text-lg font-bold text-gray-900 leading-tight">منصة المحاكاة التعليمية</h3>
                         </div>
                         
                         <p class="text-gray-600 text-sm flex-grow mb-5 leading-relaxed">
-                            Designed and coded a <span class="font-bold text-gray-900">12-page</span> interactive web application for academic demonstrations, featuring analytical and scientific engineering-based simulations.
+                            صمم وبرمج تطبيق ويب تفاعليًا مكونًا من <span class="font-bold text-gray-900">12 صفحة</span> للعروض الأكاديمية، يتضمن عمليات محاكاة علمية وتحليلية قائمة على الهندسة الفيزيائية.
                         </p>
                         
                         <div class="flex flex-wrap gap-2 mb-5">
-                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md">JavaScript</span>
-                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md">HTML/CSS</span>
-                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md">Scientific Simulations</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md" dir="ltr">JavaScript</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md" dir="ltr">HTML/CSS</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md">محاكاة علمية</span>
                         </div>
                     </div>
 
@@ -463,17 +463,17 @@
                             <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl border border-indigo-100 shrink-0">
                                 <i class="fab fa-discord"></i>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-900 leading-tight">Management Discord Bot</h3>
+                            <h3 class="text-lg font-bold text-gray-900 leading-tight">بوت ديسكورد للإدارة</h3>
                         </div>
                         
                         <p class="text-gray-600 text-sm flex-grow mb-5 leading-relaxed">
-                            Engineered a multi-functional Python bot utilized daily by hundreds of users. Focuses on organizational efficiency and automated team infrastructure.
+                            هندس بوت بايثون متعدد الوظائف يُستخدم يوميًا من قبل مئات المستخدمين. يركز بشكل أساسي على الكفاءة التنظيمية وأتمتة البنية التحتية لإدارة الفريق.
                         </p>
                         
                         <div class="flex flex-wrap gap-2 mb-5">
-                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md">Financial Tracking</span>
-                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md">Task Management</span>
-                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md">Performance Evaluation</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md">تتبع مالي</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md">إدارة المهام</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md">تقييم الأداء</span>
                         </div>
                     </div>
 
@@ -483,17 +483,17 @@
                             <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl border border-emerald-100 shrink-0">
                                 <i class="fas fa-gamepad"></i>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-900 leading-tight">Interactive Python Logic Game</h3>
+                            <h3 class="text-lg font-bold text-gray-900 leading-tight">لعبة منطق تفاعلية</h3>
                         </div>
                         
                         <p class="text-gray-600 text-sm flex-grow mb-5 leading-relaxed">
-                            Developed a custom roulette-based game system featuring user participation logic, randomized outcomes, and engagement-focused mechanics.
+                            طوّر نظام لعبة مخصص (نمط الروليت) باستخدام بايثون يتميز بمنطق مشاركة المستخدم، خوارزميات النتائج العشوائية، وآليات تركز على تحفيز التفاعل المستمر.
                         </p>
                         
                         <div class="flex flex-wrap gap-2 mb-5">
-                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md">Python</span>
-                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md">Game Logic</span>
-                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md">Algorithms</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md" dir="ltr">Python</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md">منطق الألعاب</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md">خوارزميات</span>
                         </div>
                     </div>
 
@@ -504,8 +504,8 @@
         <!-- Categorized Skills & Languages (Re-ordered by true strength) -->
         <section id="skills" class="py-16 bg-gray-50 border-t border-gray-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center md:text-left">
-                    <i class="fas fa-tools text-primary mr-3 text-xl print:hidden"></i>Technical & Core <span class="text-primary">Skills</span>
+                <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center md:text-right">
+                    <i class="fas fa-tools text-primary ml-3 text-xl print:hidden"></i>المهارات <span class="text-primary">التقنية والأساسية</span>
                 </h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 print-grid">
@@ -515,12 +515,12 @@
                         <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center mb-4 text-lg">
                             <i class="fas fa-users-cog"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-4">Leadership</h3>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">القيادة</h3>
                         <ul class="space-y-3 text-gray-700 font-medium text-sm">
-                            <li class="flex items-center"><i class="fas fa-chart-line w-5 text-gray-400"></i> Project Management</li>
-                            <li class="flex items-center"><i class="fas fa-users w-5 text-gray-400"></i> Team Coordination</li>
-                            <li class="flex items-center"><i class="fas fa-lightbulb w-5 text-gray-400"></i> Problem Solving</li>
-                            <li class="flex items-center"><i class="fas fa-handshake w-5 text-gray-400"></i> Conflict Resolution</li>
+                            <li class="flex items-center"><i class="fas fa-chart-line w-5 text-gray-400 ml-2"></i> إدارة المشاريع</li>
+                            <li class="flex items-center"><i class="fas fa-users w-5 text-gray-400 ml-2"></i> تنسيق الفرق</li>
+                            <li class="flex items-center"><i class="fas fa-lightbulb w-5 text-gray-400 ml-2"></i> حل المشكلات</li>
+                            <li class="flex items-center"><i class="fas fa-handshake w-5 text-gray-400 ml-2"></i> حل النزاعات</li>
                         </ul>
                     </div>
 
@@ -529,11 +529,11 @@
                         <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mb-4 text-lg">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-4">Programming</h3>
-                        <ul class="space-y-3 text-gray-700 font-medium text-sm">
-                            <li class="flex items-center"><i class="fab fa-python w-5 text-gray-400"></i> Python</li>
-                            <li class="flex items-center"><i class="fab fa-js w-5 text-gray-400"></i> JavaScript</li>
-                            <li class="flex items-center"><i class="fab fa-html5 w-5 text-gray-400"></i> HTML/CSS</li>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">البرمجة</h3>
+                        <ul class="space-y-3 text-gray-700 font-medium text-sm" dir="ltr" style="text-align: right;">
+                            <li class="flex items-center justify-end flex-row-reverse"><i class="fab fa-python w-5 text-gray-400 mr-2"></i> Python</li>
+                            <li class="flex items-center justify-end flex-row-reverse"><i class="fab fa-js w-5 text-gray-400 mr-2"></i> JavaScript</li>
+                            <li class="flex items-center justify-end flex-row-reverse"><i class="fab fa-html5 w-5 text-gray-400 mr-2"></i> HTML/CSS</li>
                         </ul>
                     </div>
 
@@ -542,11 +542,11 @@
                         <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center mb-4 text-lg">
                             <i class="fas fa-robot"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-4">AI & Automation</h3>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">الأتمتة والذكاء الاصطناعي</h3>
                         <ul class="space-y-3 text-gray-700 font-medium text-sm">
-                            <li class="flex items-center"><i class="fas fa-cogs w-5 text-gray-400"></i> Process Automation</li>
-                            <li class="flex items-center"><i class="fas fa-comment-dots w-5 text-gray-400"></i> ChatGPT</li>
-                            <li class="flex items-center"><i class="fas fa-image w-5 text-gray-400"></i> AI Image Generation</li>
+                            <li class="flex items-center"><i class="fas fa-cogs w-5 text-gray-400 ml-2"></i> أتمتة العمليات</li>
+                            <li class="flex items-center"><i class="fas fa-comment-dots w-5 text-gray-400 ml-2"></i> ChatGPT</li>
+                            <li class="flex items-center"><i class="fas fa-image w-5 text-gray-400 ml-2"></i> توليد الصور بالـ AI</li>
                         </ul>
                     </div>
 
@@ -555,10 +555,10 @@
                         <div class="w-10 h-10 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center mb-4 text-lg">
                             <i class="fas fa-microchip"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-4">Engineering</h3>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">الهندسة</h3>
                         <ul class="space-y-3 text-gray-700 font-medium text-sm">
-                            <li class="flex items-center"><i class="fas fa-cog w-5 text-gray-400"></i> MATLAB</li>
-                            <li class="flex items-center"><i class="fas fa-dna w-5 text-gray-400"></i> Biomedical Research</li>
+                            <li class="flex items-center"><i class="fas fa-cog w-5 text-gray-400 ml-2"></i> MATLAB</li>
+                            <li class="flex items-center"><i class="fas fa-dna w-5 text-gray-400 ml-2"></i> الأبحاث الطبية الحيوية</li>
                         </ul>
                     </div>
 
@@ -567,11 +567,11 @@
                         <div class="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center mb-4 text-lg">
                             <i class="fas fa-language"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-4">Languages</h3>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">اللغات</h3>
                         <ul class="space-y-3 text-gray-700 font-medium text-sm">
-                            <li class="flex items-center"><span class="font-bold w-16">Arabic:</span> Native</li>
-                            <li class="flex items-center"><span class="font-bold w-16">English:</span> Intermediate</li>
-                            <li class="flex items-center"><span class="font-bold w-16">German:</span> Basic</li>
+                            <li class="flex items-center"><span class="font-bold ml-2">العربية:</span> اللغة الأم</li>
+                            <li class="flex items-center"><span class="font-bold ml-2">الإنجليزية:</span> متوسط</li>
+                            <li class="flex items-center"><span class="font-bold ml-2">الألمانية:</span> مبتدئ</li>
                         </ul>
                     </div>
 
@@ -582,45 +582,45 @@
         <!-- Achievements & Certifications -->
         <section id="achievements" class="py-16 bg-white border-t border-gray-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold mb-10 text-center md:text-left flex items-center justify-center md:justify-start text-gray-900">
-                    <i class="fas fa-certificate text-primary mr-4 print:hidden"></i> Achievements & Certifications
+                <h2 class="text-3xl font-bold mb-10 text-center md:text-right flex items-center justify-center md:justify-start text-gray-900">
+                    <i class="fas fa-certificate text-primary ml-4 print:hidden"></i> الإنجازات والشهادات
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 print-grid">
                     
                     <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 hover-card-up relative overflow-hidden">
-                        <div class="absolute top-0 right-0 bg-gray-200 text-gray-600 text-xs font-bold px-2 py-1 rounded-bl-lg">2025</div>
+                        <div class="absolute top-0 left-0 bg-gray-200 text-gray-600 text-xs font-bold px-2 py-1 rounded-br-lg" dir="ltr">2025</div>
                         <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4 text-xl">
                             <i class="fas fa-award"></i>
                         </div>
-                        <h4 class="font-bold text-lg mb-2 text-gray-900">Dean Appreciation Certificate</h4>
-                        <p class="text-sm text-gray-600">Official recognition for outstanding contributions and academic efforts.</p>
+                        <h4 class="font-bold text-lg mb-2 text-gray-900">شهادة تقدير من العميد</h4>
+                        <p class="text-sm text-gray-600">اعتراف رسمي بالمساهمات البارزة والجهود الأكاديمية والقيادية.</p>
                     </div>
 
                     <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 hover-card-up relative overflow-hidden">
-                        <div class="absolute top-0 right-0 bg-gray-200 text-gray-600 text-xs font-bold px-2 py-1 rounded-bl-lg">2024 - 2026</div>
+                        <div class="absolute top-0 left-0 bg-gray-200 text-gray-600 text-xs font-bold px-2 py-1 rounded-br-lg" dir="ltr">2024 - 2026</div>
                         <div class="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mb-4 text-xl">
                             <i class="fas fa-star"></i>
                         </div>
-                        <h4 class="font-bold text-lg mb-2 text-gray-900">Academic Excellence Awards</h4>
-                        <p class="text-sm text-gray-600">Maintained high standards in educational pursuits and university projects.</p>
+                        <h4 class="font-bold text-lg mb-2 text-gray-900">جوائز التفوق الأكاديمي</h4>
+                        <p class="text-sm text-gray-600">الحفاظ على معايير عالية في المساعي التعليمية والمشاريع الجامعية.</p>
                     </div>
 
                     <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 hover-card-up relative overflow-hidden">
-                        <div class="absolute top-0 right-0 bg-gray-200 text-gray-600 text-xs font-bold px-2 py-1 rounded-bl-lg">2025</div>
+                        <div class="absolute top-0 left-0 bg-gray-200 text-gray-600 text-xs font-bold px-2 py-1 rounded-br-lg" dir="ltr">2025</div>
                         <div class="w-12 h-12 bg-red-100 text-red-600 rounded-full flex items-center justify-center mb-4 text-xl">
                             <i class="fas fa-heartbeat"></i>
                         </div>
-                        <h4 class="font-bold text-lg mb-2 text-gray-900">Medical Device Training</h4>
-                        <p class="text-sm text-gray-600">Certified practical knowledge in field engineering and device operation.</p>
+                        <h4 class="font-bold text-lg mb-2 text-gray-900">تدريب الأجهزة الطبية</h4>
+                        <p class="text-sm text-gray-600">معرفة عملية معتمدة في الهندسة الميدانية وتشغيل الأجهزة المتقدمة.</p>
                     </div>
 
                     <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 hover-card-up relative overflow-hidden">
-                        <div class="absolute top-0 right-0 bg-gray-200 text-gray-600 text-xs font-bold px-2 py-1 rounded-bl-lg">2023</div>
+                        <div class="absolute top-0 left-0 bg-gray-200 text-gray-600 text-xs font-bold px-2 py-1 rounded-br-lg" dir="ltr">2023</div>
                         <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-4 text-xl">
                             <i class="fas fa-medal"></i>
                         </div>
-                        <h4 class="font-bold text-lg mb-2 text-gray-900">School Rank #3</h4>
-                        <p class="text-sm text-gray-600">Graduated high school with an exceptional 92.71% GPA.</p>
+                        <h4 class="font-bold text-lg mb-2 text-gray-900">الترتيب #3 على المدرسة</h4>
+                        <p class="text-sm text-gray-600">التخرج من المدرسة الإعدادية بمعدل استثنائي بلغ 92.71%.</p>
                     </div>
 
                 </div>
@@ -633,7 +633,7 @@
     <!-- Footer -->
     <footer class="bg-gray-900 py-8 text-center border-t border-gray-800 no-print">
         <div class="max-w-7xl mx-auto px-4">
-            <p class="text-gray-400 text-sm">
+            <p class="text-gray-400 text-sm" dir="ltr">
                 &copy; <script>document.write(new Date().getFullYear())</script> Ahmed Qays Alkhafaji. All rights reserved.
             </p>
         </div>
